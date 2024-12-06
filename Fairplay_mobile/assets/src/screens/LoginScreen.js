@@ -43,7 +43,9 @@ const LoginScreen = () => {
       if (response.ok) {
         // Store user data in AsyncStorage
         await AsyncStorage.setItem('userData', JSON.stringify(responseData));
-        navigation.navigate('Home');
+        navigation.navigate('Home'), { 
+          updateProfile: true 
+        };
       } else {
         Alert.alert('Login Failed', responseData.detail || 'Invalid credentials');
       }

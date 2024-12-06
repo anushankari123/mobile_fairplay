@@ -5,6 +5,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './assets/src/screens/LoginScreen';
 import SignupScreen from './assets/src/screens/SignUpScreen';
 import HomeScreen from './assets/src/screens/homescreen';
+import ProfileScreen from './assets/src/screens/ProfileScreen';
+import Activity from './assets/src/screens/components/activity';
+import EditProfile from './assets/src/screens/components/EditProfile';
+import LinkedInStyleFeed from './assets/src/screens/components/allactivity';
+import PostsScreen from './assets/src/screens/post';
+import GameScreen from './assets/src/screens/gamescreen';
+import SnakeLadderRulesScreen from './assets/src/screens/components/snakeandladder';
+import SnakeAndLadderGame from './assets/src/screens/components/simulation';
 
 import { StyleSheet, View, Text } from 'react-native';
 
@@ -27,6 +35,36 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={ProfileScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="EditProfile"
+          component={EditProfile}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Post"
+          component={PostsScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Game"
+          component={GameScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Simulation"
+          component={SnakeAndLadderGame}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Snake And Ladder"
+          component={SnakeLadderRulesScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
