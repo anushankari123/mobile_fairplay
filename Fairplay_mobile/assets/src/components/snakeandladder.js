@@ -8,9 +8,9 @@ const { width, height } = Dimensions.get('window');
 
 const SnakeLadderRulesScreen = () => {
   const [fontsLoaded] = useFonts({
-    'Montserrat-Bold': require('../../../fonts/Montserrat-Bold.ttf'),
-    'Montserrat-SemiBold': require('../../../fonts/Montserrat-SemiBold.ttf'),
-    'Montserrat-Regular': require('../../../fonts/Montserrat-Regular.ttf'),
+    'Montserrat-Bold': require('../../fonts/Montserrat-Bold.ttf'),
+    'Montserrat-SemiBold': require('../../fonts/Montserrat-SemiBold.ttf'),
+    'Montserrat-Regular': require('../../fonts/Montserrat-Regular.ttf'),
   });
 
   const navigation = useNavigation();

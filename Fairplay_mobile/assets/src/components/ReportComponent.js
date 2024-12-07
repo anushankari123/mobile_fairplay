@@ -9,7 +9,7 @@ const ReportComponent = () => {
   return (
     <View style={styles.container}>
       {/* Background Image */}
-      <Image source={require('../../../images/bgrm.png')} style={styles.backgroundImage} />
+      <Image source={require('../../images/bgrm.png')} style={styles.backgroundImage} />
 
       {/* Content */}
       <View style={styles.content}>

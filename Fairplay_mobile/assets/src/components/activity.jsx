@@ -44,7 +44,7 @@ const ActivityPost = ({ post, userProfile }) => {
             : 'https://via.placeholder.com/40' 
         }} 
         style={styles.userImage} 
-        defaultSource={require('../../../images/post_bg.png')}
+        defaultSource={require('../../images/post_bg.png')}
       />
       <View style={styles.postContent}>
         <View style={styles.postHeader}>

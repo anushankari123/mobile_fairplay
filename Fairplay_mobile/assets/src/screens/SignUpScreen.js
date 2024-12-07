@@ -40,7 +40,7 @@ const SignupScreen = () => {
         bio: null
       };
 
-      const response = await fetch('http://192.168.0.6:8000/users', {  // Update with your local IP address
+      const response = await fetch('http://192.168.118.149:8000/users', {  // Update with your local IP address
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

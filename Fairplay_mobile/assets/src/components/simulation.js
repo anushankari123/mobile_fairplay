@@ -228,11 +228,11 @@ const SnakeAndLadderGame = ({ navigation }) => {
         {/* Game Board */}
         <View style={styles.boardContainer}>
           <ImageBackground
-            source={require("../../../images/Board.png")}
+            source={require("../../images/Board.png")}
             style={styles.board}
           >
             <Image
-              source={require("../../../images/player.png")}
+              source={require("../../images/player.png")}
               style={[styles.playerImage, playerCordinates]}
             />
           </ImageBackground>

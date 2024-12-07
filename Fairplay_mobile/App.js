@@ -6,13 +6,13 @@ import LoginScreen from './assets/src/screens/LoginScreen';
 import SignupScreen from './assets/src/screens/SignUpScreen';
 import HomeScreen from './assets/src/screens/homescreen';
 import ProfileScreen from './assets/src/screens/ProfileScreen';
-import Activity from './assets/src/screens/components/activity';
-import EditProfile from './assets/src/screens/components/EditProfile';
-import LinkedInStyleFeed from './assets/src/screens/components/allactivity';
-import PostsScreen from './assets/src/screens/post';
+import Activity from './assets/src/components/activity';
+import EditProfile from './assets/src/components/EditProfile';
+import LinkedInStyleFeed from './assets/src/components/allactivity';
+//import PostsScreen from './assets/src/screens/post';
 import GameScreen from './assets/src/screens/gamescreen';
-import SnakeLadderRulesScreen from './assets/src/screens/components/snakeandladder';
-import SnakeAndLadderGame from './assets/src/screens/components/simulation';
+import SnakeLadderRulesScreen from './assets/src/components/snakeandladder';
+import SnakeAndLadderGame from './assets/src/components/simulation';
 
 import { StyleSheet, View, Text } from 'react-native';
 
@@ -47,11 +47,11 @@ export default function App() {
           component={EditProfile}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Post"
           component={PostsScreen}
           options={{ headerShown: false }}
-        />
+        /> */}
         <Stack.Screen
           name="Game"
           component={GameScreen}

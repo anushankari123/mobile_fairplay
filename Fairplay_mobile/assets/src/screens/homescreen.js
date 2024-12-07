@@ -12,10 +12,10 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { useState, useEffect, useRef } from "react";
 import { useNavigation } from "@react-navigation/native";
-import NewsDisplay from "./components/News";
-import AntiDopingTimeline from "./components/AntiDopingTimeline";
-import ReportComponent from "./components/ReportComponent";
-import NewsTicker from "./components/NewsTicker";
+import NewsDisplay from "../components/News";
+import AntiDopingTimeline from "../components/AntiDopingTimeline";
+import ReportComponent from "../components/ReportComponent";
+import NewsTicker from "../components/NewsTicker";
 
 
 const { width, height } = Dimensions.get('window');

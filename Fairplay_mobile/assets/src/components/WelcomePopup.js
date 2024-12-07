@@ -108,7 +108,7 @@ const WelcomePopup = ({ onClose }) => {
         ]}
       >
         <Image
-          source={require('../../../images/avatar.png')}
+          source={require('../../images/avatar.png')}
           style={styles.avatar}
           resizeMode="contain"
         />

@@ -10,8 +10,8 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { Audio } from 'expo-av';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import WelcomePopup from './components/WelcomePopup';
-import Leaderboard from './components/leaderboard'
+import WelcomePopup from '../components/WelcomePopup';
+import Leaderboard from '../components/leaderboard'
 
 const MenuButton = ({ icon, text, index, onPress, active }) => {
   return (

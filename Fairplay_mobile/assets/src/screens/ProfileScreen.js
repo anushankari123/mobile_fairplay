@@ -66,7 +66,7 @@ const ProfileScreen = () => {
     try {
       if (!baseUserData?.id) return;
   
-      const response = await axios.get(`http://192.168.0.6:8000/users/${baseUserData.id}`);
+      const response = await axios.get(`http://192.168.118.149:8000/users/${baseUserData.id}`);
       if (response.data) {
         const updatedUserData = {
           ...baseUserData,
@@ -84,7 +84,7 @@ const ProfileScreen = () => {
         setUserData(updatedUserData);
         
         if (updatedUserData.dp_url) {
-          const imageUrl = `http://192.168.0.6:8000/images/${updatedUserData.dp_url.split('/').pop()}`;
+          const imageUrl = `http://192.168.118.149:8000/images/${updatedUserData.dp_url.split('/').pop()}`;
           setProfilePicture(imageUrl);
         }
       }
@@ -133,7 +133,7 @@ const ProfileScreen = () => {
         name: `profile_picture.${fileExtension}`,
       });
 
-      const uploadResponse = await axios.post('http://192.168.0.6:8000/uploads', formData, {
+      const uploadResponse = await axios.post('http://192.168.118.149:8000/uploads', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -141,7 +141,7 @@ const ProfileScreen = () => {
 
       const imageUrl = uploadResponse.data.image_url;
 
-      const updateResponse = await axios.patch(`http://192.168.0.6:8000/users/${userData.id}`, 
+      const updateResponse = await axios.patch(`http://192.168.118.149:8000/users/${userData.id}`, 
         { dp_url: imageUrl },
         {
           headers: {
@@ -158,7 +158,7 @@ const ProfileScreen = () => {
         await AsyncStorage.setItem('userData', JSON.stringify(updatedUserData));
         setUserData(updatedUserData);
         
-        const profileImageUrl = `http://192.168.0.6/images/${imageUrl.split('/').pop()}`;
+        const profileImageUrl = `http://192.168.118.149:/images/${imageUrl.split('/').pop()}`;
         setProfilePicture(profileImageUrl);
         
         Alert.alert('Success', 'Profile picture updated successfully.');
