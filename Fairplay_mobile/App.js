@@ -10,12 +10,10 @@ import Activity from './assets/src/components/activity';
 import EditProfile from './assets/src/components/EditProfile';
 import LinkedInStyleFeed from './assets/src/components/allactivity';
 //import PostsScreen from './assets/src/screens/post';
-import GameScreen from './assets/src/screens/gamescreen';
-import SnakeLadderRulesScreen from './assets/src/components/snakeandladder';
-import SnakeAndLadderGame from './assets/src/components/simulation';
 
 import { StyleSheet, View, Text } from 'react-native';
 {/* GAMES */}
+import GameScreen from './assets/src/screens/gamescreen';
 {/* hangman games */}
 import HangmanRulesScreen from "./assets/src/components/games/hangman/hangmanrules";
 import LevelSelectorScreen from "./assets/src/components/games/hangman/hangmanlevel";
@@ -25,6 +23,26 @@ import Hangman2 from "./assets/src/components/games/hangman/hangman2";
 import Hangman3 from "./assets/src/components/games/hangman/hangman3";
 {/* wordscramble games */}
 import Scramble from "./assets/src/components/games/word_scramble/scramble";
+{/* quiz game */}
+import QuizRulesScreen from "./assets/src/components/games/quiz_game/quizrules";
+import CategorySelectionScreen from "./assets/src/components/games/quiz_game/quizcategory";
+import Quiz from "./assets/src/components/games/quiz_game/quiz";
+import Quiz1 from "./assets/src/components/games/quiz_game/quiz1";
+import Quiz2 from "./assets/src/components/games/quiz_game/quiz2";
+import Quiz3 from "./assets/src/components/games/quiz_game/quiz3";
+{/* memory game */}
+import MemoryGame from "./assets/src/components/games/memory_game/memory";
+{/* crossword game */}
+import CrosswordRulesScreen from "./assets/src/components/games/crossword_game/crosswordrules";
+import CrosswordGame from "./assets/src/components/games/crossword_game/crossword";
+import CrosswordGame1 from "./assets/src/components/games/crossword_game/crossword1";
+import CrosswordGame2 from "./assets/src/components/games/crossword_game/crossword2";
+import CrosswordGame3 from "./assets/src/components/games/crossword_game/crossword3";
+import CrosswordLevelSelector from "./assets/src/components/games/crossword_game/crosswordlevel";
+{/* snake and ladder game */}
+import SnakeAndLadderGame from './assets/src/components/games/snakeandladder/simulation';
+import SnakeLadderRulesScreen from './assets/src/components/games/snakeandladder/snakeandladder';
+
 const Stack = createStackNavigator(); // Create the Stack Navigator
 
 export default function App() {
@@ -66,11 +84,7 @@ export default function App() {
           component={GameScreen}
           options={{ headerShown: false }}
         />
-        <Stack.Screen
-          name="Simulation"
-          component={SnakeAndLadderGame}
-          options={{ headerShown: false }}
-        />
+        
         <Stack.Screen
           name="Snake And Ladder"
           component={SnakeLadderRulesScreen}
@@ -112,6 +126,80 @@ export default function App() {
         <Stack.Screen
           name="Scramble"
           component={Scramble}
+          options={{ headerShown: false }}
+        />
+        {/* quiz game */}
+        <Stack.Screen
+          name="Quiz Rules"
+          component={QuizRulesScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz Category"
+          component={CategorySelectionScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz"
+          component={Quiz}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz1"
+          component={Quiz1}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz2"
+          component={Quiz2}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Quiz3"
+          component={Quiz3}
+          options={{ headerShown: false }}
+        />
+        {/* memory game */}
+        <Stack.Screen
+          name="Memory Game"
+          component={MemoryGame}
+          options={{ headerShown: false }}
+        />
+        {/* crossword game */}
+        <Stack.Screen
+          name="Crossword Rules"
+          component={CrosswordRulesScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Crossword Level"
+          component={CrosswordLevelSelector}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Crossword"
+          component={CrosswordGame}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Crossword1"
+          component={CrosswordGame1}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Crossword2"
+          component={CrosswordGame2}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Crossword3"
+          component={CrosswordGame3}
+          options={{ headerShown: false }}
+        />
+        {/* snake and ladder game */}
+        <Stack.Screen
+          name="Simulation"
+          component={SnakeAndLadderGame}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
