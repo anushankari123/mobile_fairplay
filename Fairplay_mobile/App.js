@@ -15,13 +15,22 @@ import SnakeLadderRulesScreen from './assets/src/components/snakeandladder';
 import SnakeAndLadderGame from './assets/src/components/simulation';
 
 import { StyleSheet, View, Text } from 'react-native';
-
+{/* GAMES */}
+{/* hangman games */}
+import HangmanRulesScreen from "./assets/src/components/games/hangman/hangmanrules";
+import LevelSelectorScreen from "./assets/src/components/games/hangman/hangmanlevel";
+import Hangman from "./assets/src/components/games/hangman/hangman";
+import Hangman1 from "./assets/src/components/games/hangman/hangman1";
+import Hangman2 from "./assets/src/components/games/hangman/hangman2";
+import Hangman3 from "./assets/src/components/games/hangman/hangman3";
+{/* wordscramble games */}
+import Scramble from "./assets/src/components/games/word_scramble/scramble";
 const Stack = createStackNavigator(); // Create the Stack Navigator
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login" screenOptions={{ cardStyle: { height: '100%' } }}>
+      <Stack.Navigator initialRouteName="Game" screenOptions={{ cardStyle: { height: '100%' } }}>
         <Stack.Screen
           name="Login"
           component={LoginScreen}
@@ -65,6 +74,44 @@ export default function App() {
         <Stack.Screen
           name="Snake And Ladder"
           component={SnakeLadderRulesScreen}
+          options={{ headerShown: false }}
+        />
+        {/* GAMES */}
+        {/* hangman game */}
+        <Stack.Screen
+          name="Hangman Rules"
+          component={HangmanRulesScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Hangman Level"
+          component={LevelSelectorScreen}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="Hangman"
+          component={Hangman}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Hangman1"
+          component={Hangman1}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Hangman2"
+          component={Hangman2}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Hangman3"
+          component={Hangman3}
+          options={{ headerShown: false }}
+        />
+        {/* wordscramble game */}
+        <Stack.Screen
+          name="Scramble"
+          component={Scramble}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
