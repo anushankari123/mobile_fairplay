@@ -9,6 +9,7 @@ import ProfileScreen from './assets/src/screens/ProfileScreen';
 import Activity from './assets/src/components/activity';
 import EditProfile from './assets/src/components/EditProfile';
 import LinkedInStyleFeed from './assets/src/components/allactivity';
+import ModulesScreen from './assets/src/screens/ModuleScreen'; 
 //import PostsScreen from './assets/src/screens/post';
 
 import { StyleSheet, View, Text } from 'react-native';
@@ -42,13 +43,16 @@ import CrosswordLevelSelector from "./assets/src/components/games/crossword_game
 {/* snake and ladder game */}
 import SnakeAndLadderGame from './assets/src/components/games/snakeandladder/simulation';
 import SnakeLadderRulesScreen from './assets/src/components/games/snakeandladder/snakeandladder';
+import StatsPage from './assets/src/screens/StatsPage';
+import Podcastcomp from './assets/src/screens/components/Podcastcomp';
+import ModuleQuizScreen from './assets/src/screens/ModuleQuizScreen';
 
 const Stack = createStackNavigator(); // Create the Stack Navigator
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Game" screenOptions={{ cardStyle: { height: '100%' } }}>
+      <Stack.Navigator initialRouteName="ModuleScreen" screenOptions={{ cardStyle: { height: '100%' } }}>
         <Stack.Screen
           name="Login"
           component={LoginScreen}
@@ -202,6 +206,18 @@ export default function App() {
           component={SnakeAndLadderGame}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name="Stats"
+          component={StatsPage}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="podcast"
+          component={Podcastcomp}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="ModuleScreen" component={ModulesScreen} />
+        <Stack.Screen name="ModuleQuizScreen" component={ModuleQuizScreen} options={{ title: 'Module Quiz' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
